@@ -10,12 +10,12 @@ import UIKit
 import Combine
 
 class OperationsSearchViewController: UIViewController {
-    
-    var viewModel: OperationsSearchDelegate?
-    
+        
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
+
+    var viewModel: OperationsSearchDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +30,17 @@ class OperationsSearchViewController: UIViewController {
 
 extension  OperationsSearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let viewModel = viewModel else { return 0 }
-        guard let operations = viewModel.operations else { return 0 }
+        guard let viewModel = viewModel,
+              let operations = viewModel.operations else { return 0 }
         return operations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let viewModel = viewModel,
+              let operations = viewModel.operations else { return UITableViewCell() }
+        let cell = UITableViewCell()
+        cell.textLabel?.text = operations[indexPath.row].operationType
+        return cell
     }
 }
 
