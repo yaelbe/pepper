@@ -9,15 +9,8 @@ import Foundation
 import UIKit
 
 class AppCoordinator {
-    private let window: UIWindow
-    
-    init(window: UIWindow) {
-        self.window = window
-    }
 
     func start() {
-//        UIApplication.shared.windows.first?.rootViewController?.present(navigation, animated: false)
-        let coordinator = OperationsSearchCoordinator()
-        coordinator.start()
+
     }
 }

@@ -11,36 +11,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let window =  UIWindow(frame: UIScreen.main.bounds)
-//        appCoordinator = AppCoordinator(window: window)
-//        appCoordinator.start()
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    window = UIWindow(frame: UIScreen.main.bounds)
-//                    window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-//                    window?.makeKeyAndVisible()
-//        
-//        self.window = window
-//        self.window?.makeKeyAndVisible()
-//        let window =  UIWindow(frame: UIScreen.main.bounds)
-//        appCoordinator
-        // Override point for customization after application launch.
-       
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    window = UIWindow(frame: UIScreen.main.bounds)
-//                    window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-//                    window?.makeKeyAndVisible()
-        
-        
         return true
     }
 
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -52,7 +28,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
